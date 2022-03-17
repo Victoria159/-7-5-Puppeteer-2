@@ -15,7 +15,7 @@ var { setDefaultTimeout } = require("@cucumber/cucumber");
 setDefaultTimeout(60 * 1000);
 
 Before(async function () {
-  const browser = await puppeteer.launch({ headless: false, slowMo: 400 });
+  const browser = await puppeteer.launch({ headless: false, slowMo: 50 });
   const page = await browser.newPage();
   this.browser = browser;
   this.page = page;
