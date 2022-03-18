@@ -6,7 +6,7 @@ Feature: Ticket Booking - Tests
         Given user is on start page "http://qamid.tmweb.ru/client/index.php"
         When user choose day "Tomorrow"
         And user choose film "Фильм 3" and time "12:00"
-        And user choose raw "7" and chair "1" and click it
+        And user choose raw "8" and chair 3" and click it
         And user press Book
         Then user on "http://qamid.tmweb.ru/client/payment.php" page
         And user sees the film suggested "Фильм 3", the hall suggested "Зал3" on payment page
@@ -17,7 +17,7 @@ Feature: Ticket Booking - Tests
         Given user is on start page "http://qamid.tmweb.ru/client/index.php"
         When user choose day "Tomorrow"
         And user choose film "Фильм 1" and time "09:00"
-        And user choose raw "4" and chair "1" and click it
+        And user choose raw "8" and chair "3" and click it
         And user press Book
         Then user on "http://qamid.tmweb.ru/client/payment.php" page
         And user sees the film suggested "Фильм 1", the hall suggested "Зал2" on payment page
@@ -28,7 +28,7 @@ Feature: Ticket Booking - Tests
         Given user is on start page "http://qamid.tmweb.ru/client/index.php"
         When user choose day "Tomorrow"
         And user choose film "Фильм 3" and time "12:00"
-        And user choose raw "3" and chair "1" and click it
+        And user choose raw "8" and chair "3" and click it
         And user press Book
         Then user should not see the page title "Электорнный билет"
         And user should remain on the "http://qamid.tmweb.ru/client/hall.php" page

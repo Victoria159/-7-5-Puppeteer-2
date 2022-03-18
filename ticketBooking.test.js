@@ -31,8 +31,8 @@ describe("Ticket Booking Tests", () => {
     const hallForEqual = "Зал3";
     const time = '"12:00"';
     const timeForEqual = time.slice(1, -1);
-    const row = 2;
-    const chair = 7;
+    const row = 7;
+    const chair = 2;
     const expectedUrlAfterAttemptOfBooking =
       "http://qamid.tmweb.ru/client/payment.php";
     // выбираем день недели
@@ -70,8 +70,8 @@ describe("Ticket Booking Tests", () => {
     const hallForEqual = "Зал2";
     const time = '"09:00"';
     const timeForEqual = time.slice(1, -1);
-    const row = 1;
-    const chair = 1;
+    const row = 6;
+    const chair = 3;
     const expectedUrlAfterAttemptOfBooking =
       "http://qamid.tmweb.ru/client/payment.php";
     // выполнение теста
@@ -101,8 +101,8 @@ describe("Ticket Booking Tests", () => {
     const hallForEqual = "Зал3";
     const time = '"12:00"';
     const timeForEqual = time.slice(1, -1);
-    const row = 2;
-    const chair = 7;
+    const row = 3;
+    const chair = 1;
     const expectedUrlAfterAttemptOfBooking =
       "http://qamid.tmweb.ru/client/hall.php";
     // выполнение теста
