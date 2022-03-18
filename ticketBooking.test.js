@@ -31,7 +31,7 @@ describe("Ticket Booking Tests", () => {
     const hallForEqual = "Зал3";
     const time = '"12:00"';
     const timeForEqual = time.slice(1, -1);
-    const row = 8;
+    const row = 2;
     const chair = 7;
     const expectedUrlAfterAttemptOfBooking =
       "http://qamid.tmweb.ru/client/payment.php";
@@ -52,7 +52,7 @@ describe("Ticket Booking Tests", () => {
     await book(page);
     await page.waitForNavigation();
     // проверка перехода на страницу информации о забронированных билетах
-    await page.waitForSelector(".ticket__check-title", { timeout: 60000 });
+    await page.waitForSelector(".ticket__check-title", { timeout: 30000 });
     await checkUrl(page, expectedUrlAfterAttemptOfBooking);
     // проверка информации о забронированном билете
     await checkTicketDataAfterBooking(page, filmForEqual, hallForEqual);
@@ -67,11 +67,11 @@ describe("Ticket Booking Tests", () => {
     const day = getTomorrowDay();
     const film = '"Фильм 1"';
     const filmForEqual = film.slice(1, -1);
-    const hallForEqual = "Зал 1";
-    const time = '"15:00"';
+    const hallForEqual = "Зал2";
+    const time = '"09:00"';
     const timeForEqual = time.slice(1, -1);
-    const row = 8;
-    const chair = 7;
+    const row = 1;
+    const chair = 1;
     const expectedUrlAfterAttemptOfBooking =
       "http://qamid.tmweb.ru/client/payment.php";
     // выполнение теста
@@ -101,8 +101,8 @@ describe("Ticket Booking Tests", () => {
     const hallForEqual = "Зал3";
     const time = '"12:00"';
     const timeForEqual = time.slice(1, -1);
-    const row = 1;
-    const chair = 8;
+    const row = 2;
+    const chair = 7;
     const expectedUrlAfterAttemptOfBooking =
       "http://qamid.tmweb.ru/client/hall.php";
     // выполнение теста

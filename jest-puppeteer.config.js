@@ -3,7 +3,7 @@ module.exports = {
     headless: false,
     defaultViewport: null,
     args: ["--start-maximized"], //— используем максимальный размер окна браузера
-    slowMo: 400,
-    devtools: true,
+    slowMo: 50,
+    devtools: false,
   },
 };
